@@ -1,0 +1,8 @@
+fastapi[all]
+tqdm
+pdfminer
+textract
+requests
+elasticsearch
+langdetect
+

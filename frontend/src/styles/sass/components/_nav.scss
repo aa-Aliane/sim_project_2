@@ -1,0 +1,9 @@
+.nav {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    &__items {
+        display: flex;
+        gap: 1rem;
+    }
+}

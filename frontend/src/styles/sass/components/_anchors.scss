@@ -1,0 +1,22 @@
+a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  &:hover {
+    color: var(--clr-primary-200);
+  }
+}
+
+.a {
+  &--nav {
+    color: var(--clr-primary-900);
+
+    &:hover {
+      color: var(--clr-neutral-500);
+    }
+
+    &[data-current="true"] {
+      color: var(--clr-primary-700);
+      text-shadow: 0 0 1rem var(--clr-primary-500);
+    }
+  }
+}

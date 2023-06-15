@@ -1,0 +1,13 @@
+select {
+  background-color: none;
+  border: none;
+  padding: 0.2rem 1rem;
+
+  &::before {
+    background-color: red;
+  }
+}
+
+option {
+  padding: 1rem;
+}

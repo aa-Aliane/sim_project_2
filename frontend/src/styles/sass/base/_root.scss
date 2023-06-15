@@ -1,0 +1,99 @@
+@use "../abstract/" as *;
+
+:root {
+  // colors
+  @each $clr, $shades in $colors {
+    @each $key, $value in $shades {
+      --clr-#{$clr}-#{$key}: #{$value};
+    }
+  }
+
+  //   fonts sizes
+  @each $key, $value in $font-sizes {
+    --fs-#{$key}: #{$value};
+  }
+
+  //   fonts weights
+  @each $key, $value in $font-weights {
+    --fw-#{$key}: #{$value};
+  }
+
+  // paddings and margins
+  @each $key, $value in $spacing {
+    --s#{$key}: #{$value};
+  }
+
+  --ff-latin: "Poppins", sans-serif;
+  --ff-arabic: "Cairo", sans-serif;
+  --dr: 0.4rem;
+  --dr-sm: 0.2rem;
+
+  --duration-1: 0.1s;
+}
+
+// colors
+@each $clr, $shades in $colors {
+  @each $key, $value in $shades {
+    .clr-#{$clr}-#{$key} {
+      background-color: var(--clr-#{$clr}-#{$key});
+    }
+    .text-#{$clr}-#{$key} {
+      color: var(--clr-#{$clr}-#{$key});
+    }
+
+    .border-#{$clr}-#{$key} {
+      box-shadow: 0 0 0.5rem 0.5rem var(--clr-#{$clr}-#{$key});
+      border-radius: 0.3rem;
+    }
+  }
+}
+
+//   fonts sizes
+@each $key, $value in $font-sizes {
+  .fs-#{$key} {
+    font-size: var(--fs-#{$key});
+  }
+}
+
+//   fonts weights
+@each $key, $value in $font-weights {
+  .fw-#{$key} {
+    font-weight: var(--fw-#{$key});
+  }
+}
+
+//margins and paddings
+@each $key, $value in $spacing {
+  .p-#{$key} {
+    padding: #{$value};
+  }
+  .pt-#{$key} {
+    padding-top: #{$value};
+  }
+  .pb-#{$key} {
+    padding-bottom: #{$value};
+  }
+  .pl-#{$key} {
+    padding-left: #{$value};
+  }
+  .pr-#{$key} {
+    padding-right: #{$value};
+  }
+
+  .m-#{$key} {
+    margin: #{$value};
+  }
+
+  .mt-#{$key} {
+    margin-top: #{$value};
+  }
+  .mb-#{$key} {
+    margin-bottom: #{$value};
+  }
+  .ml-#{$key} {
+    margin-left: #{$value};
+  }
+  .mr-#{$key} {
+    margin-right: #{$value};
+  }
+}

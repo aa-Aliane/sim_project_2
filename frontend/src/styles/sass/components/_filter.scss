@@ -1,0 +1,49 @@
+.filters {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  width: 100%;
+  background-color: var(--clr-neutral-200);
+  padding: 2rem;
+  position: relative;
+
+  &__toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: default;
+  }
+
+  &[data-opened="false"] {
+    grid-column: 1 / 2;
+    width: 0;
+    overflow: hidden;
+    transition: width var(--duration) linear;
+
+    & li {
+      width: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.filter {
+  overflow-y: auto;
+  & * {
+    padding: 0.2rem;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: var(--fw-medium);
+    cursor: pointer;
+  }
+  &__item {
+    &[data-display="false"] {
+      display: none;
+    }
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    // font-size: var(--fs-s);
+  }
+}

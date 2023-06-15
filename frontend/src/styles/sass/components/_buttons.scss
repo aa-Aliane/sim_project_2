@@ -1,0 +1,57 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  font-size: var(--fs-s);
+  font-weight: var(--fw-medium);
+  border: none;
+  border-radius: var(--dr);
+  cursor: pointer;
+
+  &--check {
+    background-color: var(--clr-primary-700);
+    color: var(--clr-neutral-100);
+
+    &:hover {
+      background-color: var(--clr-primary-200);
+      color: var(--clr-primary-900);
+      box-shadow: 0 0 0.2rem 0.2rem var(--clr-primary-900);
+    }
+  }
+
+  &--pagination {
+    width: 2rem;
+    height: 2rem;
+    padding: 1em;
+    font-weight: var(--fw-medium);
+    background-color: var(--clr-primary-700);
+    color: var(--clr-neutral-100);
+
+    &:hover {
+      background-color: var(--clr-primary-200);
+      color: var(--clr-primary-900);
+    }
+
+    &[data-selected="true"] {
+      border: 0.1rem solid var(--clr-primary-900);
+      background-color: var(--clr-primary-200);
+      color: var(--clr-primary-900);
+    }
+  }
+
+  &--cancel {
+    width: 3rem;
+    height: 2rem;
+  }
+}
+
+.btn[data-display="false"] {
+  display: none;
+}
+
+.btn[data-enabled="false"] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}

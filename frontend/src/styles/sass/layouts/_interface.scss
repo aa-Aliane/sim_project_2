@@ -1,0 +1,76 @@
+.interface {
+  grid-column: 5 / 8;
+  place-self: center;
+  width: 95%;
+  margin: auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+
+  &[data-opened="false"] {
+    grid-column: 3 / 9;
+    width: 50%;
+  }
+
+  &__cancel {
+    grid-column: 3 / 4;
+    margin-left: auto;
+  }
+
+  &__text {
+    grid-column: 1 / 4;
+    box-shadow: 0 0 0.2rem 0.2rem var(--clr-primary-900);
+    border-radius: var(--dr);
+    padding: 2rem;
+  }
+
+  &__upload {
+    grid-column: 1 /2;
+  }
+
+  &__check {
+    grid-column: 3 /4;
+  }
+
+  &__upload[type="file"] {
+    display: none;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid 0.5rem var(--clr-primary-700);
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  transition: all 0.5s ease-in;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

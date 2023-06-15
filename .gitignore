@@ -1,0 +1,14 @@
+__*__*
+!__init__.py
+node_modules
+*.index
+*.json
+*.csv
+*.tsv
+!package.json
+extracted
+.env
+versions
+alembic.ini
+gpu
+

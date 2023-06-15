@@ -1,0 +1,13 @@
+.checkbox {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: var(--clr-primary-200);
+      border: 0.1rem solid var(--clr-primary-900);
+
+      &:hover {
+        box-shadow: 0 0 0.2rem 0.1rem var(--clr-primary-700);
+      }
+      &[data-selected="true"] {
+        background-color: var(--clr-primary-700);
+      }
+    }
